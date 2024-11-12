@@ -1,0 +1,543 @@
+/* Reset básico e ajustes de layout */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif; /* Usando Poppins como fonte principal */
+    line-height: 1.6;
+    color: #4d4d4d; /* Cinza escuro para o texto principal */
+    background-color: none; /* Bege claro como cor de fundo principal */
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+h1, h2, h3 {
+    color: #004b6e; /* Azul escuro para títulos */
+}
+
+.banner-conten{
+
+    padding: 0 20px;
+    max-width: 1200px;
+}
+.banner-content h1{
+
+    color: #fff;
+}
+
+
+/* Header (navbar) */
+.navbar {
+    background-color: #004b6e; /* Azul escuro */
+    color: #fff;
+    padding: 20px 0;
+    position: fixed; /* Fixa a navbar no topo */
+    top: 0; /* Fixa no topo da página */
+    left: 0; /* Alinha a navbar à esquerda */
+    width: 100%; /* Garante que a navbar ocupe toda a largura da tela */
+    z-index: 1000; /* Coloca a navbar acima de outros elementos */
+    padding: 20px;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: #c9b76b; /* Marrom dourado para o hover */
+}
+
+.menu-icon {
+    display: none;
+    cursor: pointer;
+}
+
+.menu-icon .bar {
+    width: 25px;
+    height: 4px;
+    background-color: #fff;
+    margin: 5px 0;
+}
+
+/* Ajustando a logo para que ela fique fixa acima da navbar */
+#logo {
+    position: absolute;
+    top: 10px;  /* Ajuste a distância que a logo ficará acima da navbar */
+    transform: translateX(-50%);  /* Centraliza a logo horizontalmente */
+    height: 100px; /* Ajuste o tamanho da logo */
+    width: auto;
+    padding-left:40px;
+    z-index: 1100; /* Garante que a logo fique acima da navbar */
+}
+
+/* Classe para esconder a logo */
+.hide-logo {
+    display: none;
+}
+
+/* Banner */
+.banner {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5) 50%), url('../img/securitiy-banner.jpg');
+    color: #fff;
+    padding: 160px 20px 100px 20px;
+    text-align: center;
+    border-bottom: 5px solid #c9b76b; /* Linha fina marrom dourado para destacar */
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    /* Flexbox para centralizar o conteúdo */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner h1 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    margin-top: 60px;
+}
+
+.mission{
+
+    font-size: 1rem;
+    
+}
+
+.banner p {
+    font-size: 2.1rem;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.mission a{
+    font-style: italic;
+    
+}
+
+
+.banner .whatsapp-button{
+margin-top:20px;
+}
+
+.whatsapp-button {
+    display: inline-block;
+    background-color: #25d366; /* WhatsApp verde */
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    margin-top: 20px;
+}
+
+.whatsapp-button i {
+    margin-right: 10px;
+}
+
+/* Principais Ramos */
+.principais-ramos {
+    padding: 80px 0 40px;
+    background-color: #ffffff; /* Fundo branco para destacar os itens */
+    text-align: center;
+}
+.principais-ramos-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #004b6e; /* Azul escuro */
+}
+
+.ramos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.ramos-item {
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+.ramos-item img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+
+/* FAQ */
+.faq-section {
+    background-color: #f9f9f9; /* Fundo claro para FAQ */
+    padding: 60px 0;
+    text-align: center;
+}
+
+.faq-title {
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+    color: #004b6e; /* Azul escuro */
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+    padding: 0 20px;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+}
+
+.faq-question {
+    background-color: #f9f9f9;
+    color: #000;
+    padding: 15px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    font-size: 1.1rem;
+    cursor: pointer;
+    position: relative;
+    border-radius: 3px;
+    border-bottom: 2px solid #d6d6d6;
+    margin-bottom: 5px;
+}
+
+.faq-item active{
+    border-bottom: none;
+}
+
+.faq-question .faq-icon {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+}
+
+.faq-answer {
+    padding: 15px;
+    background-color: #f1f1f1; /* Fundo claro para respostas */
+    display: none;
+}
+
+.faq-item.active .faq-answer {
+    display: block;
+}
+
+/* Parceiras */
+.parceiras-secao {
+    padding: 80px 0 40px;
+    background-color: #ffffff;
+}
+
+.parceiras-container {
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.parceiras-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #004b6e; /* Azul escuro */
+}
+
+.parceiras-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.parceira-item {
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 170px;
+    overflow: hidden;
+}
+
+.parceira-item img {
+    max-width: 100%;
+    height: auto;
+    max-height: 120px;
+    object-fit: contain;
+}
+
+/* Contatos */
+.contatos-secao {
+    background-color: #f9f9f9; /* Fundo claro para seção de contatos */
+    padding: 60px 0 10px 0;
+}
+
+.contatos-secao h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #004b6e; /* Azul escuro */
+}
+
+.contatos-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.mapa-container {
+    flex: 1;
+    padding: 0 20px;
+    position: relative;
+    width: 100%;
+    height: 500px;
+}
+
+.mapa-container iframe {
+    width: 100%;
+    height: 80%;
+    border: none;
+}
+
+.informacoes-contato {
+    flex: 1;
+    margin-left: 20px;
+}
+
+.informacoes-contato p {
+    margin-bottom: 20px;
+}
+
+.whatsapp-button {
+    display: inline-block;
+    background-color: #25d366; /* WhatsApp verde */
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    margin-top: 20px;
+}
+
+#whatsapp-btn {
+    position: fixed; /* Fixa o botão no canto da tela */
+    bottom: 20px; /* Distância do fundo da tela */
+    right: 20px; /* Distância da lateral direita */
+    background-color: #25d366; /* Cor de fundo do botão (cor do WhatsApp) */
+    color: #fff; /* Cor do ícone */
+    width: 80px; /* Largura do botão (igual à altura para ficar redondo) */
+    height: 80px; /* Altura do botão */
+    border-radius: 50%; /* Deixa o botão redondo */
+    display: flex;
+    justify-content: center; /* Centraliza o ícone horizontalmente */
+    align-items: center; /* Centraliza o ícone verticalmente */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para destacar */
+    text-decoration: none;
+    transition: transform 0.3s, box-shadow 0.3s;
+    z-index: 999; /* Garante que o botão fique acima de outros elementos */
+}
+
+#whatsapp-btn:hover {
+    transform: scale(1.1); /* Aumenta o botão quando passar o mouse sobre ele */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3); /* Sombra mais forte no hover */
+}
+
+#whatsapp-icon {
+    width: 50px; /* Tamanho do ícone */
+    height: 50px; /* Tamanho do ícone */
+}
+
+/* Footer */
+.footer {
+    background-color: #004b6e; /* Azul escuro */
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer p {
+    font-size: 1rem;
+}
+
+.ramos-item i {
+    font-size: 0px; /* Ajuste para o tamanho desejado */
+    color: #004b6e; /* Altere para a cor que desejar, se necessário */
+    margin-bottom: 15px; /* Espaçamento entre o ícone e o título */
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+
+
+
+    .nav-links {
+        display: none; /* Certifique-se de que está oculto em telas pequenas */
+    }
+    
+    .nav-links.active {
+        display: block;
+        opacity: 1;
+        transform: translateY(0); /* Efeito de deslizamento do menu */
+    }
+    
+    .nav-links a {
+        display: block;
+        margin: 15px 0; /* Aumentando o espaço entre os itens */
+        font-size: 1.2rem; /* Aumentando o tamanho da fonte */
+        font-weight: bold;
+        transition: color 0.3s ease;
+    }
+    .nav-links a:hover {
+        color: #c9b76b; /* Marrom dourado para o hover */
+        transform: scale(1.1); /* Efeito de aumento ao passar o mouse */
+    }
+
+    #logo {
+        top: 10px;
+        left: 50%;
+        width: auto;  /* Aumenta o tamanho da logo proporcionalmente em telas pequenas */
+        max-width: 120px;  /* Limite para o tamanho da logo */
+        transform: translateX(-50%);
+    }
+
+    .menu-icon {
+        display: block;
+        z-index: 1000; /* Garantindo que o ícone fique sobre o menu */
+    }
+
+    /* Efeito para o menu hambúrguer */
+    .menu-icon .bar {
+        transition: transform 0.3s ease;
+    }
+
+    .menu-icon.active .bar:nth-child(1) {
+        transform: rotate(45deg) translateY(13px);
+    }
+
+    .menu-icon.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-icon.active .bar:nth-child(3) {
+        transform: rotate(-45deg) translateY(-12px);
+    }
+
+    .parceiras-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .ramos-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .contatos-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mapa-container {
+        height: 80vh;
+    }
+
+    .mapa-container iframe {
+        padding: 20px 20px;
+        height: 350px;
+    }
+
+    h1 {
+        font-size: 2rem; /* Menor em telas menores */
+    }
+
+    .banner{
+        height: 100vh;
+    }
+    .banner h1 {
+        font-size: 2.2rem;
+        margin-top: 20px;
+    }
+
+    .banner p {
+        font-size: 1.2rem;
+        margin-bottom: 0px;
+    }
+
+    .parceiras-grid {
+        grid-template-columns: 1fr 1fr; /* Duas colunas no mobile */
+    }
+
+    /* Quando houver um item na última linha, ele ocupará toda a largura */
+    .parceiras-grid .parceira-item:nth-child(9) {
+        grid-column: span 2; /* O último item ocupa as duas colunas */
+    }
+    .principais-ramos-container h1{
+        padding: 0 20px;
+    }
+
+    .banner .whatsapp-button{
+        margin-top: 40px;
+    }
+
+
+    .contatos-secao{
+    
+        padding-bottom: 60px;
+    
+    }
+
+}
+
+/* Classe para esconder a logo no menu mobile */
+.hide-logo {
+    opacity: 0;
+    transition: opacity 0.3s ease; /* Transição suave ao esconder a logo */
+}
+
+/* Ajustes para telas com largura máxima de 521px */
+@media (max-width: 521px) {
+    .informacoes-contato {
+        padding: 20px; /* Padding de 20px em todos os lados */
+        text-align: center; /* Centraliza o conteúdo dentro do bloco */
+        margin: 0 auto; /* Garante que o bloco seja centralizado */
+    }
+    .contatos-secao{
+        
+    padding-bottom: 20px;
+
+    }
+}
+
+.ramos-item i {
+    font-size: 50px; /* Ajuste para o tamanho desejado */
+    color: #004b6e; /* Altere para a cor que desejar, se necessário */
+    margin-bottom: 15px; /* Espaçamento entre o ícone e o título */
+}
