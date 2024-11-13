@@ -11,7 +11,9 @@ body {
     color: #4d4d4d; /* Cinza escuro para o texto principal */
     background-color: none; /* Bege claro como cor de fundo principal */
 }
-
+html {
+    scroll-behavior: smooth;
+}
 .container {
     width: 100%;
     max-width: 1200px;
@@ -50,7 +52,7 @@ body {
     display: flex;
     justify-content: space-between; /* Alinha os itens com espaço entre logo e links */
     align-items: center; /* Alinha verticalmente */
-    padding: 0 15px; /* Ajusta o padding */
+    padding: 0; /* Ajusta o padding */
     width: 100%; /* Garante que ocupe toda a largura da tela */
 
 }
@@ -92,14 +94,12 @@ body {
     position: absolute;
     top: 10px;  /* Ajuste a distância que a logo ficará acima da navbar */
     transform: translateX(-50%);  /* Centraliza a logo horizontalmente */
-    height: 100px; /* Ajuste o tamanho da logo */
+    height: 95px; /* Ajuste o tamanho da logo */
     width: auto;
-    padding-left:40px;
+    padding-left: 125px;
     z-index: 1100; /* Garante que a logo fique acima da navbar */
 }
-
-/* Classe para esconder a logo */
-.hide-logo {
+#logo-mobile{
     display: none;
 }
 
@@ -160,6 +160,12 @@ margin-top:20px;
     text-decoration: none;
     font-size: 1.1rem;
     margin-top: 20px;
+    transition: transform 0.2s ease-in-out; /* Transição suave para transformação */
+}
+
+.whatsapp-button:hover {
+    transform: scale(1.1); /* Aumenta o tamanho do botão em 10% */
+
 }
 
 .whatsapp-button i {
@@ -415,63 +421,65 @@ margin-top:20px;
         height: 45px;
         
     }
-    .nav-links {
-        display: none; /* Esconde os links em telas pequenas */
-        position: absolute;
-        top: 65px; /* Coloca os links abaixo da navbar */
-        left: 0;
-        background-color: #004b6e; /* Fundo azul escuro */
-        width: 100%;
-        flex-direction: column; /* Alinha os links em coluna */
-        gap: 10px;
-        align-items: center; /* Centraliza os links */
-    }
+.nav-links {
+    position: absolute;
+    top: 45px; /* Coloca o menu abaixo da navbar */
+    right: 0;
+    background-color: #004b6e;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    opacity: 0; /* Inicialmente o menu é invisível */
+    transform: translateY(-20px); /* Começa deslocado para cima */
+    visibility: hidden; /* Torna o menu invisível e não afeta o layout */
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s ease 0.3s; /* Transições suaves */
+}
     .container{
         padding: 0px;
         align-items: right;
     }
-    .nav-links {
-        display: none; /* Esconde os links na versão mobile */
-        position: absolute;
-        top: 45px; /* Coloca o menu abaixo da navbar */
-        right: 0;
-        background-color: #004b6e;
-        width: 100%; /* O menu ocupa toda a largura */
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: 10px;
-    }
     .menu-icon.active + .nav-links {
         display: flex; /* Exibe os links quando o menu hambúrguer for clicado */
+        opacity: 1; /* Torna o menu visível */
+        transform: translateY(0); /* O menu desliza para a posição original */
     }
+    /* Quando a classe 'active' for adicionada ao menu */
     .nav-links.active {
-        display: block;
-        opacity: 1;
-        transform: translateY(0); /* Efeito de deslizamento do menu */
+        opacity: 1; /* Torna o menu visível */
+        transform: translateY(0); /* O menu desliza para a posição original */
+        visibility: visible; /* Torna o menu visível */
+        transition: opacity 0.3s ease, transform 0.3s ease; /* Suaviza as transições */
     }
     
+    /* Estilo dos links dentro do menu */
     .nav-links a {
         display: block;
-        margin: 15px 0; /* Aumentando o espaço entre os itens */
-        font-size: 1.2rem; /* Aumentando o tamanho da fonte */
+        margin: 15px 0;
+        font-size: 1.2rem;
         font-weight: bold;
         transition: color 0.3s ease;
     }
+    /* Hover nos links */
     .nav-links a:hover {
         color: #c9b76b; /* Marrom dourado para o hover */
         transform: scale(1.1); /* Efeito de aumento ao passar o mouse */
     }
 
-    #logo {
-        top: 10px;
-        left: 52%;
-        width: auto;  /* Aumenta o tamanho da logo proporcionalmente em telas pequenas */
+    #logo{
+        display: none;
+    }
+    #logo-mobile {
+        display: block;
+        position: absolute;  /* Faz com que o logo seja posicionado em relação ao contêiner pai */
+        top: 100%;  /* Coloca o logo no meio verticalmente */
+        left: 51%;  /* Coloca o logo no meio horizontalmente */
+        transform: translate(-50%, -50%);  /* Ajusta o logo para estar exatamente no centro */
+        width: auto;
         max-width: 120px;  /* Limite para o tamanho da logo */
-        transform: translateX(-50%);
-        padding: 0%;
-        height: 80px;
-
+        height: 75px;
+        padding: 0;
     }
 
     .menu-icon {
@@ -646,14 +654,18 @@ margin-top:20px;
         display: flex;
         flex-direction: column;
     }
+
     
 }
 
 /* Classe para esconder a logo no menu mobile */
-.hide-logo {
+.hide-logo{
     opacity: 0;
     transition: opacity 0.3s ease; /* Transição suave ao esconder a logo */
+    display: none !important;  /* Garante que o elemento fique oculto */
+
 }
+
 
 /* Ajustes para telas com largura máxima de 521px */
 @media (max-width: 521px) {
