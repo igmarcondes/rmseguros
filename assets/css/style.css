@@ -423,7 +423,7 @@ margin-top:20px;
     }
 .nav-links {
     position: absolute;
-    top: 45px; /* Coloca o menu abaixo da navbar */
+    top: 44px; /* Coloca o menu abaixo da navbar */
     right: 0;
     background-color: #004b6e;
     width: 100%;
