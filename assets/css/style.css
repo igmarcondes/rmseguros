@@ -284,14 +284,14 @@ margin-top:20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 170px;
+    height: 150px;
     overflow: hidden;
 }
 
 .parceira-item img {
     max-width: 100%;
     height: auto;
-    max-height: 120px;
+    max-height: 90px;
     object-fit: contain;
 }
 
@@ -398,7 +398,9 @@ margin-top:20px;
 /* Media Queries para Responsividade */
 @media (max-width: 768px) {
 
-
+    .navbar{
+        height: 70px;
+    }
 
     .nav-links {
         display: none; /* Certifique-se de que está oculto em telas pequenas */
@@ -428,6 +430,8 @@ margin-top:20px;
         width: auto;  /* Aumenta o tamanho da logo proporcionalmente em telas pequenas */
         max-width: 120px;  /* Limite para o tamanho da logo */
         transform: translateX(-50%);
+        padding: 0%;
+
     }
 
     .menu-icon {
@@ -480,6 +484,7 @@ margin-top:20px;
 
     .banner{
         height: 100vh;
+        padding: 140px 20px;
     }
     .banner h1 {
         font-size: 2.2rem;
