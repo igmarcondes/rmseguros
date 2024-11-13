@@ -38,23 +38,36 @@ h1, h2, h3 {
 .navbar {
     background-color: #004b6e; /* Azul escuro */
     color: #fff;
-    padding: 20px 0;
+    padding: 0 15px; /* Padding para o conteúdo não grudar nas bordas */
     position: fixed; /* Fixa a navbar no topo */
     top: 0; /* Fixa no topo da página */
     left: 0; /* Alinha a navbar à esquerda */
     width: 100%; /* Garante que a navbar ocupe toda a largura da tela */
     z-index: 1000; /* Coloca a navbar acima de outros elementos */
     padding: 20px;
+    display: flex; /* Usando flexbox para alinhar logo e menu */
+    justify-content: space-between; /* Distribui a logo e o menu com espaço entre eles */
+    align-items: center; /* Alinha verticalmente o conteúdo */
 }
 
 .navbar .container {
     display: flex;
-    justify-content: space-between;
-    width: 100%; /* Garante que a navbar ocupe toda a largura da tela */
+    justify-content: space-between; /* Alinha os itens com espaço entre logo e links */
+    align-items: center; /* Alinha verticalmente */
+    padding: 0 15px; /* Ajusta o padding */
+    width: 100%; /* Garante que ocupe toda a largura da tela */
 }
 
 .nav-links {
-    display: flex;
+    display: none; /* Esconde os links de navegação em telas pequenas */
+    position: absolute;
+    top: 65px; /* Coloca o menu abaixo da navbar */
+    right: 0;
+    background-color: #004b6e;
+    width: 100%; /* O menu ocupa toda a largura */
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
 }
 
 .nav-links a {
@@ -62,7 +75,10 @@ h1, h2, h3 {
     text-decoration: none;
     margin-left: 20px;
     font-size: 1rem;
-    font-weight: bold;
+    font-weight: bold;        
+    padding: 10px;
+    display: block;
+    text-align: center;
 }
 
 .nav-links a:hover {
@@ -80,6 +96,9 @@ h1, h2, h3 {
     height: 4px;
     background-color: #fff;
     margin: 5px 0;
+}
+.navbar .logo {
+    display: block; /* Para garantir que o logo se comporte como bloco */
 }
 
 /* Ajustando a logo para que ela fique fixa acima da navbar */
@@ -409,19 +428,29 @@ margin-top:20px;
     .navbar{
         height: 65px;
         
+        
     }
     .navbar .container{
         background-color: #004b6e; /* Azul escuro */
-        width: 200px; /* Garante que a navbar ocupe toda a largura da tela */
-        margin-left: 210px;
     }
     .container{
         padding: 0 15px;
+        align-items: right;
     }
     .nav-links {
-        display: none; /* Certifique-se de que está oculto em telas pequenas */
+        display: none; /* Esconde os links na versão mobile */
+        position: absolute;
+        top: 65px; /* Coloca o menu abaixo da navbar */
+        right: 0;
+        background-color: #004b6e;
+        width: 100%; /* O menu ocupa toda a largura */
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
     }
-    
+    .menu-icon.active + .nav-links {
+        display: flex; /* Exibe os links quando o menu hambúrguer for clicado */
+    }
     .nav-links.active {
         display: block;
         opacity: 1;
@@ -481,6 +510,7 @@ margin-top:20px;
         grid-template-columns: 1fr 1fr;
     }
 
+    
     .contatos-container {
         flex-direction: column;
         align-items: center;
