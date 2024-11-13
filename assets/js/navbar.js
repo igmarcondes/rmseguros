@@ -55,9 +55,9 @@ document.addEventListener("click", function(event) {
 window.addEventListener('scroll', function() {
     const logo = document.getElementById('logo');
 
-    // Se o scroll da página for maior que 40px
-    if (window.scrollY > 40) {
-        logo.style.height = '50px'; // Reduz o tamanho da logo suavemente
+    // Se o scroll da página for maior que 70px
+    if (window.scrollY > 90) {
+        logo.style.height = '30px'; // Reduz o tamanho da logo suavemente
     } else {
         logo.style.height = '80px'; // Retorna ao tamanho original
     }
