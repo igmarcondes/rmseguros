@@ -413,10 +413,10 @@ margin-top:20px;
     .navbar .container{
         background-color: #004b6e; /* Azul escuro */
         width: 200px; /* Garante que a navbar ocupe toda a largura da tela */
-        margin-left: 200px;
+        margin-left: 210px;
     }
     .container{
-        padding: 0 5px;
+        padding: 0 15px;
     }
     .nav-links {
         display: none; /* Certifique-se de que está oculto em telas pequenas */
