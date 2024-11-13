@@ -72,6 +72,7 @@ h1, h2, h3 {
 .menu-icon {
     display: none;
     cursor: pointer;
+
 }
 
 .menu-icon .bar {
@@ -399,7 +400,12 @@ margin-top:20px;
 @media (max-width: 768px) {
 
     .navbar{
-        height: 70px;
+        height: 65px;
+        
+    }
+    .navbar .container{
+        background-color: #004b6e; /* Azul escuro */
+        max-width: 100vw;
     }
 
     .nav-links {
@@ -426,7 +432,7 @@ margin-top:20px;
 
     #logo {
         top: 10px;
-        left: 50%;
+        left: 52%;
         width: auto;  /* Aumenta o tamanho da logo proporcionalmente em telas pequenas */
         max-width: 120px;  /* Limite para o tamanho da logo */
         transform: translateX(-50%);
@@ -518,7 +524,27 @@ margin-top:20px;
         padding-bottom: 60px;
     
     }
+    .principais-ramos-container h1{
+        font-size: 2.2rem;
+    }
 
+
+    #whatsapp-btn {
+
+        width: 60px; /* Largura do botão (igual à altura para ficar redondo) */
+        height: 60px; /* Altura do botão */
+
+    }
+
+    #whatsapp-icon {
+        width: 30px; /* Tamanho do ícone */
+        height: 30px; /* Tamanho do ícone */
+    }
+    .principais-ramos-container h1,
+    .parceiras-container h1,
+    .contatos-secao h1{
+        font-size: 2.2rem;
+    }
 }
 
 /* Classe para esconder a logo no menu mobile */
