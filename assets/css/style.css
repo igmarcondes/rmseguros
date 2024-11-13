@@ -50,7 +50,7 @@ h1, h2, h3 {
 .navbar .container {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    width: 100%; /* Garante que a navbar ocupe toda a largura da tela */
 }
 
 .nav-links {
@@ -444,6 +444,7 @@ margin-top:20px;
         max-width: 120px;  /* Limite para o tamanho da logo */
         transform: translateX(-50%);
         padding: 0%;
+        height 80px;
 
     }
 
@@ -502,12 +503,12 @@ margin-top:20px;
         
     }
     .banner h1 {
-        font-size: 2.2rem;
+        font-size: 2rem;
         margin-top: 20px;
     }
 
     .banner p {
-        font-size: 1.5rem;
+        font-size: 1.1rem;
         margin-bottom: 0px;
         
 
@@ -526,7 +527,7 @@ margin-top:20px;
     }
 
     .parceiras-grid .parceira-item:nth-child(9) img {
-        max-width: 15%; /* Tamanho menor apenas para o último item */
+        max-width: 20%; /* Tamanho menor apenas para o último item */
     }
     .principais-ramos-container h1{
         padding: 0 20px;
@@ -579,7 +580,7 @@ margin-top:20px;
     }
 
     .parceira-item img {
-        max-width: 45%;
+        max-width: 60%;
     }
     .parceira-item {
         padding: 0px;
