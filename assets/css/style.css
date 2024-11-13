@@ -608,7 +608,17 @@ margin-top:20px;
         margin-bottom: 10px;
     }
 
+    .ramos-item i {
+        font-size: px; /* Ajuste para o tamanho desejado */
+        align-items: center;
 
+    }
+    .ramos-item {
+        padding: 15px;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
     
 }
 
