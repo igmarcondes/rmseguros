@@ -478,7 +478,7 @@ margin-top:20px;
         transform: translate(-50%, -50%);  /* Ajusta o logo para estar exatamente no centro */
         width: auto;
         max-width: 120px;  /* Limite para o tamanho da logo */
-        height: 75px;
+        height: 70px;
         padding: 0;
     }
 
@@ -678,6 +678,18 @@ margin-top:20px;
     padding-bottom: 20px;
 
     }
+
+    .whatsapp-button {
+        display: inline-block;
+        background-color: #25d366; /* WhatsApp verde */
+        color: #fff;
+        padding: 8px 8px;
+        border-radius: 30px;
+        text-decoration: none;
+        font-size: 1.1rem;
+        margin-top: 20px;
+    }
+    
 }
 
 .ramos-item i {
