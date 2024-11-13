@@ -484,6 +484,7 @@ margin-top:20px;
 
     .mapa-container {
         height: 80vh;
+        padding: 0;
     }
 
     .mapa-container iframe {
