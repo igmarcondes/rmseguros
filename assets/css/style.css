@@ -416,7 +416,7 @@ margin-top:20px;
 @media (max-width: 768px) {
 
     .navbar{
-        height: 65px;
+        height: 45px;
         
     }
     .nav-links {
@@ -437,7 +437,7 @@ margin-top:20px;
     .nav-links {
         display: none; /* Esconde os links na versão mobile */
         position: absolute;
-        top: 65px; /* Coloca o menu abaixo da navbar */
+        top: 45px; /* Coloca o menu abaixo da navbar */
         right: 0;
         background-color: #004b6e;
         width: 100%; /* O menu ocupa toda a largura */
@@ -639,8 +639,8 @@ margin-top:20px;
     }
 
     .ramos-item i {
-        font-size: px; /* Ajuste para o tamanho desejado */
-         align-items: center;
+        font-size: 20px; /* Ajuste para o tamanho desejado */
+        align-items: center;
 
     }
     .ramos-item {
