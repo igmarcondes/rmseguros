@@ -19,10 +19,6 @@ body {
     padding: 0 15px;
 }
 
-h1, h2, h3 {
-    color: #004b6e; /* Azul escuro para títulos */
-}
-
 .banner-conten{
 
     padding: 0 20px;
@@ -314,7 +310,7 @@ margin-top:20px;
 
 /* Contatos */
 .contatos-secao {
-    background-color: #f9f9f9; /* Fundo claro para seção de contatos */
+    background-color: #04243c; /* Fundo claro para seção de contatos */
     padding: 60px 0 10px 0;
 }
 
@@ -322,7 +318,7 @@ margin-top:20px;
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 40px;
-    color: #004b6e; /* Azul escuro */
+    color: #c9b86a; /* Azul escuro */
 }
 
 .contatos-container {
@@ -349,6 +345,7 @@ margin-top:20px;
 .informacoes-contato {
     flex: 1;
     margin-left: 20px;
+    color: #c9b86a;
 }
 
 .informacoes-contato p {
@@ -635,6 +632,7 @@ margin-top:20px;
 
     .informacoes-contato h2{
 
+        color: #c9b86a;
         margin-bottom: 10px;
     }
 
